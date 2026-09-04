@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  auditor:
+    build: .
+    image: theauditor:latest
+    volumes:
+      # Mount current directory as target for analysis
+      - .:/target
+      # Persist analysis cache between runs
+      - auditor-cache:/target/.pf
+    working_dir: /target
+    # Override entrypoint for interactive use
+    entrypoint: ["aud"]
+    command: ["--help"]
+
+volumes:
+  auditor-cache:

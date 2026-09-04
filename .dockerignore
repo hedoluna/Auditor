@@ -1,0 +1,40 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.venv
+.auditor_venv
+*.egg-info
+dist
+build
+
+# Analysis output (will be regenerated)
+.pf
+
+# Node
+node_modules
+theauditor/ast_extractors/javascript/node_modules
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Tests
+tests
+.pytest_cache
+.coverage
+htmlcov
+
+# Docs
+*.md
+!README.md
+Architecture
+openspec
+agents
